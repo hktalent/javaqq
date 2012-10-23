@@ -88,6 +88,14 @@ public class DefaultResponseContext implements ResponseContext {
 	public boolean isOk() {
 		return getStatus() == HttpStatus.SC_OK;
 	}
+	
+	@Override
+	public byte[] getAsByteArray() {
+	    if (this.content == null || this.content.size() == 0) {
+            return null;
+	    }
+	    return content.toByteArray();
+	}
 
 	@Override
 	public String getAsString() {

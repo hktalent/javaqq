@@ -1,6 +1,8 @@
 package com.blee.model;
 
 public class Check {
+    
+    private String qqNumber;
 
     private String type;
     
@@ -46,6 +48,14 @@ public class Check {
     public String toString() {
         return "Check [type=" + type + ", vCode=" + vCode + ", enVerifyCode="
                 + enVerifyCode + ", verifycodeHex=" + verifycodeHex + "]";
+    }
+
+    public String getQqNumber() {
+        return qqNumber;
+    }
+
+    public void setQqNumber(String qqNumber) {
+        this.qqNumber = qqNumber;
     }
     
 }

@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.blee.http.RequestContext;
+import com.blee.util.ForgeBrowser;
 import com.blee.util.StringUtils;
 
 public class DefaultRequestContext implements RequestContext {
@@ -217,6 +218,12 @@ public class DefaultRequestContext implements RequestContext {
 
     public void setCookiePath(String cookiePath) {
         this.cookiePath = cookiePath;
+    }
+
+    @Override
+    public RequestContext initDefault() {
+        ForgeBrowser.forge(this);
+        return this;
     }
 
 }

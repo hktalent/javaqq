@@ -8,6 +8,8 @@ import org.apache.http.cookie.Cookie;
 public interface ResponseContext {
 
 	HttpResponse get();
+	
+	byte[] getAsByteArray();
 
 	String getAsString();
 

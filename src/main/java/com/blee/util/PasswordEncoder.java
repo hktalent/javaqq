@@ -33,12 +33,9 @@ public class PasswordEncoder {
     }
 
     public static String passwordEncoding(String password, String code, String verifyCode) {
-//        String md5Pass = hexchar2bin(MD5.getMD5(password));
-//        String h = MD5.getMD5(md5Pass + code);
-//        String g = MD5.getMD5(h + verifycode);
         Object t;
         try {
-            t = se.eval(String.format("passwordEncoding('%s', '%s', '%s');", password, code, verifyCode.toUpperCase()));
+            t = se.eval(String.format("passwordEncoding('%s', '%s', '%s');", password, verifyCode, code.toUpperCase()));
         } catch (ScriptException e) {
             throw new ServiceException(e.getMessage());
         }

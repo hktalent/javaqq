@@ -111,5 +111,7 @@ public interface RequestContext {
 	 * @return
 	 */
 	public RequestContext addCookies(Map<String, String> cookies);
+	
+	public RequestContext initDefault();
 
 }

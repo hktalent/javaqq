@@ -1,5 +1,7 @@
 package com.blee.qq;
 
+import com.blee.constant.LoginStatus;
+
 public class QQContext {
 
     private String qqNumber;
@@ -9,9 +11,19 @@ public class QQContext {
     /**
      * 加密后的密码
      */
-    private String hexPassword;
+    private String enPassword;
 
     private VerifyCodeProvider verifyCodeProvider;
+    
+    private LoginStatus status;
+    
+    private String ptwebqq;
+    
+    private String skey;
+    
+    private String psessionId = null;
+    
+    private String vfwebqq = null;
     
     
     
@@ -39,12 +51,52 @@ public class QQContext {
         this.verifyCodeProvider = verifyCodeProvider;
     }
 
-    public String getHexPassword() {
-        return hexPassword;
+    public String getEnPassword() {
+        return enPassword;
     }
 
-    public void setHexPassword(String hexPassword) {
-        this.hexPassword = hexPassword;
+    public void setEnPassword(String enPassword) {
+        this.enPassword = enPassword;
+    }
+
+    public LoginStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(LoginStatus status) {
+        this.status = status;
+    }
+
+    public String getPtwebqq() {
+        return ptwebqq;
+    }
+
+    public void setPtwebqq(String ptwebqq) {
+        this.ptwebqq = ptwebqq;
+    }
+
+    public String getSkey() {
+        return skey;
+    }
+
+    public void setSkey(String skey) {
+        this.skey = skey;
+    }
+
+    public String getPsessionId() {
+        return psessionId;
+    }
+
+    public void setPsessionId(String psessionId) {
+        this.psessionId = psessionId;
+    }
+
+    public String getVfwebqq() {
+        return vfwebqq;
+    }
+
+    public void setVfwebqq(String vfwebqq) {
+        this.vfwebqq = vfwebqq;
     }
     
 }
